@@ -13,9 +13,7 @@
 
 <body>
 
-  <!-- ============================================================
-       NAVIGATION
-  ============================================================ -->
+  <!-- nav -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">
       <div class="nav-logo-icon"><i class="fa-solid fa-building-columns"></i></div>
@@ -36,7 +34,6 @@
     </button>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" onclick="closeMobileMenu()"><i class="fa-solid fa-xmark"></i></button>
     <a href="#hero"      onclick="closeMobileMenu()">Home</a>
@@ -47,9 +44,7 @@
     <a href="#contact"   onclick="closeMobileMenu()">Contact</a>
   </div>
 
-  <!-- ============================================================
-       HERO SECTION
-  ============================================================ -->
+  <!-- hero -->
   <section id="hero">
     <div class="hero-blob hero-blob-1"></div>
     <div class="hero-blob hero-blob-2"></div>
@@ -123,9 +118,7 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       ABOUT SECTION
-  ============================================================ -->
+  <!-- about -->
   <section id="about">
     <div class="container">
       <div class="about-grid">
@@ -187,9 +180,7 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       LISTINGS SECTION
-  ============================================================ -->
+  <!-- listings -->
   <section id="listings">
     <div class="container">
 
@@ -203,7 +194,6 @@
         </p>
       </div>
 
-      <!-- Filter Bar -->
       <div class="filter-bar reveal">
         <div class="filter-row">
           <div class="filter-group search-group" style="flex:2; min-width:200px;">
@@ -236,14 +226,9 @@
             <label class="filter-lbl" for="filterType">Property Type</label>
             <select class="f-control" id="filterType" onchange="filterAndRender()">
               <option value="">All Types</option>
-              <option value="Villa">Villa</option>
-              <option value="Penthouse">Penthouse</option>
-              <option value="Estate">Estate</option>
+              <option value="House">House / Single Family</option>
+              <option value="Condo">Condo / Apartment</option>
               <option value="Townhouse">Townhouse</option>
-              <option value="House">House</option>
-              <option value="Condo">Condo</option>
-              <option value="Loft">Loft</option>
-              <option value="Mansion">Mansion</option>
             </select>
           </div>
 
@@ -264,12 +249,11 @@
           </button>
         </div>
 
-        <!-- Price Range Slider -->
         <div class="price-range-row">
           <div class="price-range-header">
             <span class="price-range-lbl"><i class="fa-solid fa-sliders"></i> Price Range</span>
             <div class="price-range-vals">
-              <span id="priceMinDisplay">$400K</span>
+              <span id="priceMinDisplay">$0</span>
               <span class="pr-sep">—</span>
               <span id="priceMaxDisplay">$7M</span>
             </div>
@@ -277,11 +261,11 @@
           <div class="dual-range-wrap">
             <div class="range-track-bg"></div>
             <div class="range-track-fill" id="rangeTrackFill"></div>
-            <input type="range" id="priceMin" min="400000" max="7000000" value="400000"  step="50000" oninput="onPriceSlider()" />
-            <input type="range" id="priceMax" min="400000" max="7000000" value="7000000" step="50000" oninput="onPriceSlider()" />
+            <input type="range" id="priceMin" min="0" max="7000000" value="0"       step="50000" oninput="onPriceSlider()" />
+            <input type="range" id="priceMax" min="0" max="7000000" value="7000000" step="50000" oninput="onPriceSlider()" />
           </div>
           <div class="price-ticks">
-            <span class="price-tick">$400K</span>
+            <span class="price-tick">$0</span>
             <span class="price-tick">$1.75M</span>
             <span class="price-tick">$3.5M</span>
             <span class="price-tick">$5.25M</span>
@@ -290,25 +274,20 @@
         </div>
       </div>
 
-      <!-- Results bar -->
       <div class="results-bar">
-        <p class="results-count">Showing <strong id="resultsNum">10</strong> properties</p>
+        <p class="results-count">Showing <strong id="resultsNum">0</strong> properties</p>
         <div class="view-toggle">
           <button class="view-btn active" id="gridViewBtn" onclick="setView('grid')" title="Grid view"><i class="fa-solid fa-grip"></i></button>
           <button class="view-btn" id="listViewBtn" onclick="setView('list')" title="List view"><i class="fa-solid fa-list"></i></button>
         </div>
       </div>
 
-      <div class="listings-grid" id="listingsGrid">
-        <!-- Populated by script.js -->
-      </div>
+      <div class="listings-grid" id="listingsGrid"></div>
 
     </div>
   </section>
 
-  <!-- ============================================================
-       REVIEWS SECTION
-  ============================================================ -->
+  <!-- reviews -->
   <section id="reviews">
     <div class="container">
       <div class="reviews-head">
@@ -375,9 +354,7 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       MEET OUR REALTORS
-  ============================================================ -->
+  <!-- team -->
   <section id="realtors">
     <div class="container">
       <div class="realtors-head">
@@ -458,9 +435,7 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       CONTACT / FOOTER
-  ============================================================ -->
+  <!-- contact -->
   <section id="contact">
     <div class="container">
       <div class="contact-grid">
@@ -538,6 +513,5 @@
   </button>
 
   <script src="script.js"></script>
-
 </body>
 </html>

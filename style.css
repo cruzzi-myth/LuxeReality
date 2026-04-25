@@ -1,36 +1,31 @@
-    /* ============================================================
-       RESET & CSS VARIABLES
-    ============================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --primary:       #1D4ED8;
+      --primary: #1D4ED8;
       --primary-light: #3B82F6;
-      --primary-dark:  #1E3A8A;
-      --teal:          #0EA5E9;
-      --teal-dark:     #0284C7;
-      --accent:        #10B981;
-      --gold:          #F59E0B;
+      --primary-dark: #1E3A8A;
+      --teal: #0EA5E9;
+      --teal-dark: #0284C7;
+      --accent: #10B981;
+      --gold: #F59E0B;
 
-      --white:   #FFFFFF;
-      --bg:      #F8FAFC;
       --gray-50: #F8FAFC;
-      --gray-100:#F1F5F9;
-      --gray-200:#E2E8F0;
-      --gray-300:#CBD5E1;
-      --gray-400:#94A3B8;
-      --gray-500:#64748B;
-      --gray-600:#475569;
-      --gray-700:#334155;
-      --text:    #1E293B;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --text: #1E293B;
 
       --shadow-xs: 0 1px 3px rgba(0,0,0,0.08);
       --shadow-sm: 0 4px 12px rgba(0,0,0,0.08);
-      --shadow:    0 8px 30px rgba(0,0,0,0.10);
+      --shadow: 0 8px 30px rgba(0,0,0,0.10);
       --shadow-lg: 0 20px 60px rgba(0,0,0,0.14);
       --shadow-xl: 0 30px 80px rgba(0,0,0,0.18);
 
-      --radius:    12px;
+      --radius: 12px;
       --radius-lg: 20px;
       --radius-xl: 28px;
 
@@ -42,18 +37,16 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
+      background: var(--gray-50);
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
     }
 
     img { display: block; max-width: 100%; }
-    a   { text-decoration: none; }
+    a { text-decoration: none; }
 
-    /* ============================================================
-       SCROLL REVEAL
-    ============================================================ */
+    /* scroll reveal */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -69,9 +62,7 @@
     .reveal.delay-4 { transition-delay: 0.4s; }
     .reveal.delay-5 { transition-delay: 0.5s; }
 
-    /* ============================================================
-       NAVIGATION
-    ============================================================ */
+    /* navigation */
     #navbar {
       position: fixed;
       top: 0;
@@ -221,9 +212,7 @@
     }
     .mobile-close:hover { background: rgba(255,255,255,0.2); }
 
-    /* ============================================================
-       HERO SECTION
-    ============================================================ */
+    /* hero section */
     #hero {
       min-height: 100vh;
       background: linear-gradient(135deg, #0F172A 0%, #1D4ED8 55%, #0EA5E9 100%);
@@ -419,7 +408,7 @@
     }
     @keyframes fadeInRight {
       from { opacity: 0; transform: translateX(50px); }
-      to   { opacity: 1; transform: translateX(0); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
     .hero-prop-card {
@@ -463,9 +452,7 @@
       margin-top: 0.15rem;
     }
 
-    /* ============================================================
-       SHARED SECTION STYLES
-    ============================================================ */
+    /* shared section styles */
     section { padding: 6rem 2.5rem; }
 
     .container { max-width: 1200px; margin: 0 auto; }
@@ -508,11 +495,9 @@
       line-height: 1.75;
     }
 
-    /* ============================================================
-       ABOUT SECTION
-    ============================================================ */
+    /* about section */
     #about {
-      background: var(--white);
+      background: white;
     }
 
     .about-grid {
@@ -629,9 +614,7 @@
       line-height: 1.55;
     }
 
-    /* ============================================================
-       LISTINGS SECTION
-    ============================================================ */
+    /* listings section */
     #listings { background: var(--gray-50); }
 
     .listings-top {
@@ -803,7 +786,7 @@
     }
     @keyframes cardIn {
       from { opacity: 0; transform: scale(0.97) translateY(12px); }
-      to   { opacity: 1; transform: scale(1) translateY(0); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
     .prop-card:hover {
       transform: translateY(-7px);
@@ -847,9 +830,9 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
-    .badge-sale    { background: var(--primary); color: white; }
+    .badge-sale { background: var(--primary); color: white; }
     .badge-featured{ background: linear-gradient(135deg, #F59E0B, #EF4444); color: white; }
-    .badge-new     { background: var(--accent); color: white; }
+    .badge-new { background: var(--accent); color: white; }
 
     .prop-fav {
       position: absolute;
@@ -926,11 +909,9 @@
     }
     .no-results i { font-size: 3.5rem; color: var(--gray-200); margin-bottom: 1.25rem; display: block; }
     .no-results h3 { font-size: 1.2rem; font-weight: 700; color: var(--gray-400); margin-bottom: 0.5rem; }
-    .no-results p  { font-size: 0.88rem; color: var(--gray-300); }
+    .no-results p { font-size: 0.88rem; color: var(--gray-300); }
 
-    /* ============================================================
-       REVIEWS SECTION
-    ============================================================ */
+    /* reviews section */
     #reviews { background: white; }
 
     .reviews-head { text-align: center; margin-bottom: 3.5rem; }
@@ -1000,12 +981,10 @@
       color: white;
       flex-shrink: 0;
     }
-    .review-name  { font-size: 0.9rem; font-weight: 700; color: var(--text); }
-    .review-role  { font-size: 0.78rem; color: var(--gray-400); margin-top: 0.1rem; }
+    .review-name { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+    .review-role { font-size: 0.78rem; color: var(--gray-400); margin-top: 0.1rem; }
 
-    /* ============================================================
-       CONTACT / FOOTER
-    ============================================================ */
+    /* contact / footer */
     #contact {
       background: linear-gradient(140deg, #0F172A 0%, #1E3A8A 60%, #1D4ED8 100%);
       padding: 6rem 2.5rem 0;
@@ -1061,7 +1040,7 @@
       flex-shrink: 0;
     }
     .c-item-main { font-weight: 600; color: white; font-size: 0.92rem; }
-    .c-item-sub  { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-top: 0.1rem; }
+    .c-item-sub { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-top: 0.1rem; }
 
     /* Contact form card */
     .contact-form-card {
@@ -1192,9 +1171,7 @@
     }
     .footer-links a:hover { color: rgba(255,255,255,0.9); }
 
-    /* ============================================================
-       REALTORS SECTION
-    ============================================================ */
+    /* realtors section */
     #realtors { background: var(--gray-50); }
 
     .realtors-head {
@@ -1336,9 +1313,7 @@
       box-shadow: 0 6px 14px rgba(29,78,216,0.32);
     }
 
-    /* ============================================================
-       SCROLL-TO-TOP BUTTON
-    ============================================================ */
+    /* scroll-to-top button */
     #scrollTopBtn {
       position: fixed;
       bottom: 2rem; right: 2rem;
@@ -1367,25 +1342,21 @@
       box-shadow: 0 12px 28px rgba(29,78,216,0.45);
     }
 
-    /* ============================================================
-       KEYFRAMES
-    ============================================================ */
+    /* keyframes */
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-18px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
     @keyframes counterUp {
       from { opacity: 0; }
-      to   { opacity: 1; }
+      to { opacity: 1; }
     }
 
-    /* ============================================================
-       REAL PROPERTY IMAGES
-    ============================================================ */
+    /* real property images */
     .prop-real-img {
       width: 100%; height: 100%;
       object-fit: cover;
@@ -1402,9 +1373,7 @@
       font-size: 4.5rem;
     }
 
-    /* ============================================================
-       PRICE RANGE DUAL SLIDER
-    ============================================================ */
+    /* price range dual slider */
     .price-range-row {
       margin-top: 1.25rem;
       padding-top: 1.25rem;
@@ -1520,13 +1489,11 @@
     }
     .price-tick { font-size: 0.7rem; color: var(--gray-400); }
 
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
+    /* responsive */
     @media (max-width: 1024px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-right { display: none; }
-      .about-grid  { grid-template-columns: 1fr; gap: 3rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .contact-grid{ grid-template-columns: 1fr; gap: 3rem; }
     }
     @media (max-width: 768px) {
@@ -1540,7 +1507,7 @@
       .listings-grid.list-view .prop-card { grid-template-columns: 1fr; }
       .listings-grid.list-view .prop-card-img { height: 200px; }
       .features-grid { grid-template-columns: 1fr; }
-      .reviews-grid  { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .filter-row { flex-direction: column; }
       .filter-group, .search-group { min-width: 100%; }

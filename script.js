@@ -1,171 +1,76 @@
-
-    /* ============================================================
-       PROPERTY DATA ARRAY
-       Each property: id, title, price, bedrooms, bathrooms, sqft,
-       type, location, listingDate, image, emoji, gradient, status, featured
+/* ============================================================
+       RENTCAST API CONFIG
     ============================================================ */
-    const properties = [
-      {
-        id:          1,
-        title:       "Modern Hillside Villa",
-        price:       2850000,
-        bedrooms:    5,
-        bathrooms:   4,
-        sqft:        4200,
-        type:        "Villa",
-        location:    "Beverly Hills, CA",
-        listingDate: "2024-01-15",
-        image:       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-        emoji:       "🏡",
-        gradient:    "g1",
-        status:      "For Sale",
-        featured:    true
-      },
-      {
-        id:          2,
-        title:       "Downtown Luxury Penthouse",
-        price:       4200000,
-        bedrooms:    4,
-        bathrooms:   3,
-        sqft:        3800,
-        type:        "Penthouse",
-        location:    "Manhattan, NY",
-        listingDate: "2024-02-20",
-        image:       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
-        emoji:       "🏙️",
-        gradient:    "g2",
-        status:      "For Sale",
-        featured:    false
-      },
-      {
-        id:          3,
-        title:       "Beachfront Estate",
-        price:       6500000,
-        bedrooms:    6,
-        bathrooms:   5,
-        sqft:        5600,
-        type:        "Estate",
-        location:    "Malibu, CA",
-        listingDate: "2023-11-05",
-        image:       "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
-        emoji:       "🌊",
-        gradient:    "g3",
-        status:      "For Sale",
-        featured:    true
-      },
-      {
-        id:          4,
-        title:       "Contemporary Townhouse",
-        price:       875000,
-        bedrooms:    3,
-        bathrooms:   2,
-        sqft:        2100,
-        type:        "Townhouse",
-        location:    "Austin, TX",
-        listingDate: "2024-03-10",
-        image:       "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
-        emoji:       "🏘️",
-        gradient:    "g4",
-        status:      "For Sale",
-        featured:    false
-      },
-      {
-        id:          5,
-        title:       "Mountain View Retreat",
-        price:       1200000,
-        bedrooms:    4,
-        bathrooms:   3,
-        sqft:        2800,
-        type:        "House",
-        location:    "Aspen, CO",
-        listingDate: "2023-09-22",
-        image:       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-        emoji:       "⛰️",
-        gradient:    "g5",
-        status:      "For Sale",
-        featured:    false
-      },
-      {
-        id:          6,
-        title:       "Urban Studio Loft",
-        price:       425000,
-        bedrooms:    1,
-        bathrooms:   1,
-        sqft:        950,
-        type:        "Loft",
-        location:    "Chicago, IL",
-        listingDate: "2024-04-01",
-        image:       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
-        emoji:       "🏢",
-        gradient:    "g6",
-        status:      "For Sale",
-        featured:    false
-      },
-      {
-        id:          7,
-        title:       "Suburban Family Home",
-        price:       650000,
-        bedrooms:    4,
-        bathrooms:   3,
-        sqft:        2600,
-        type:        "House",
-        location:    "Nashville, TN",
-        listingDate: "2023-12-15",
-        image:       "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
-        emoji:       "🏠",
-        gradient:    "g7",
-        status:      "For Sale",
-        featured:    false
-      },
-      {
-        id:          8,
-        title:       "Waterfront Condo",
-        price:       1850000,
-        bedrooms:    3,
-        bathrooms:   2,
-        sqft:        1800,
-        type:        "Condo",
-        location:    "Miami, FL",
-        listingDate: "2024-01-28",
-        image:       "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80",
-        emoji:       "🌅",
-        gradient:    "g8",
-        status:      "For Sale",
-        featured:    false
-      },
-      {
-        id:          9,
-        title:       "Historic Brownstone",
-        price:       2100000,
-        bedrooms:    4,
-        bathrooms:   3,
-        sqft:        3200,
-        type:        "Townhouse",
-        location:    "Boston, MA",
-        listingDate: "2023-10-11",
-        image:       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
-        emoji:       "🏛️",
-        gradient:    "g9",
-        status:      "For Sale",
-        featured:    false
-      },
-      {
-        id:          10,
-        title:       "Golf Course Mansion",
-        price:       3750000,
-        bedrooms:    6,
-        bathrooms:   5,
-        sqft:        5200,
-        type:        "Mansion",
-        location:    "Scottsdale, AZ",
-        listingDate: "2024-02-05",
-        image:       "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?auto=format&fit=crop&w=800&q=80",
-        emoji:       "⛳",
-        gradient:    "g10",
-        status:      "For Sale",
-        featured:    true
+    const RENTCAST_API_KEY  = 'd9083635deae42fb807db3b9cdc35821';
+    const RENTCAST_BASE_URL = 'https://api.rentcast.io/v1';
+
+    let properties = [];
+
+    const TYPE_MAP = {
+      'Single Family': 'House',
+      'Condo':         'Condo',
+      'Townhouse':     'Townhouse',
+      'Multi Family':  'House',
+      'Apartment':     'Condo',
+      'Manufactured':  'House',
+      'Land':          'House',
+      'Commercial':    'House',
+    };
+    const EMOJIS    = ['🏡','🏙️','🌊','🏘️','⛰️','🏢','🏠','🌅','🏛️','⛳'];
+    const GRADIENTS = ['g1','g2','g3','g4','g5','g6','g7','g8','g9','g10'];
+
+    function mapRentcastListing(p, i) {
+      const city  = p.city  || '';
+      const state = p.state || '';
+      return {
+        id:          p.id || i,
+        title:       p.addressLine1 || p.formattedAddress || 'Property',
+        price:       p.price || 0,
+        bedrooms:    p.bedrooms    || 0,
+        bathrooms:   p.bathrooms   || 0,
+        sqft:        p.squareFootage || 0,
+        type:        TYPE_MAP[p.propertyType] || p.propertyType || 'House',
+        location:    city && state ? `${city}, ${state}` : p.formattedAddress || '',
+        listingDate: p.listedDate
+                       ? p.listedDate.split('T')[0]
+                       : new Date().toISOString().split('T')[0],
+        image:       (p.photos && p.photos[0]) || '',
+        emoji:       EMOJIS[i % EMOJIS.length],
+        gradient:    GRADIENTS[i % GRADIENTS.length],
+        status:      'For Sale',
+        featured:    i < 3,
+      };
+    }
+
+    async function fetchListings() {
+      const grid = document.getElementById('listingsGrid');
+      grid.innerHTML = `
+        <div class="no-results" style="grid-column:1/-1">
+          <i class="fa-solid fa-spinner fa-spin" style="font-size:2.5rem;color:var(--primary);opacity:.7"></i>
+          <h3 style="margin-top:1rem">Loading Listings…</h3>
+          <p>Fetching live properties from RentCast</p>
+        </div>`;
+
+      try {
+        const res = await fetch(
+          `${RENTCAST_BASE_URL}/listings/sale?status=Active&limit=12`,
+          { headers: { 'X-Api-Key': RENTCAST_API_KEY } }
+        );
+        if (!res.ok) throw new Error(`RentCast API error ${res.status}`);
+        const data = await res.json();
+        const listings = Array.isArray(data) ? data : (data.data || []);
+        properties = listings.map(mapRentcastListing);
+        filterAndRender();
+      } catch (err) {
+        console.error('RentCast fetch failed:', err);
+        grid.innerHTML = `
+          <div class="no-results" style="grid-column:1/-1">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <h3>Could Not Load Listings</h3>
+            <p>${err.message}</p>
+          </div>`;
       }
-    ];
+    }
 
     /* ============================================================
        UTILITY HELPERS
@@ -274,13 +179,10 @@
         return `
           <div class="prop-card" style="animation-delay:${i * 0.06}s">
             <div class="prop-card-img">
-              <img
-                src="${p.image}"
-                alt="${p.title}"
-                class="prop-real-img"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-              />
-              <div class="prop-img-fallback ${p.gradient}">${p.emoji}</div>
+              ${p.image
+                ? `<img src="${p.image}" alt="${p.title}" class="prop-real-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`
+                : ''}
+              <div class="prop-img-fallback ${p.gradient}" style="${p.image ? '' : 'display:flex'}">${p.emoji}</div>
               ${badge}
               <button class="prop-fav" onclick="toggleFav(this)" title="Save property">
                 <i class="fa-regular fa-heart"></i>
@@ -512,5 +414,5 @@
        INIT — render all listings on page load
     ============================================================ */
     updateSliderUI();
-    renderListings(properties);
+    fetchListings();
 

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxeRealty — Find Your Dream Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon"><i class="fa-solid fa-building-columns"></i></div>
+      <span class="nav-logo-text">LuxeRealty</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#listings">Listings</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#realtors">Our Team</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+
+    <button class="hamburger" onclick="openMobileMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMobileMenu()"><i class="fa-solid fa-xmark"></i></button>
+    <a href="#hero"      onclick="closeMobileMenu()">Home</a>
+    <a href="#about"     onclick="closeMobileMenu()">About</a>
+    <a href="#listings"  onclick="closeMobileMenu()">Listings</a>
+    <a href="#reviews"   onclick="closeMobileMenu()">Reviews</a>
+    <a href="#realtors"  onclick="closeMobileMenu()">Our Team</a>
+    <a href="#contact"   onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          #1 Real Estate Platform in 2024
+        </div>
+
+        <h1 class="hero-title">
+          Find Your <span class="highlight">Dream Home</span> Today
+        </h1>
+
+        <p class="hero-subtitle">
+          Discover thousands of premium listings curated by our expert agents. From luxury penthouses to cozy family homes — your perfect property is just a search away.
+        </p>
+
+        <div class="hero-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="heroSearch" placeholder="Search by city, neighborhood, or type…" />
+          <button class="hero-search-btn" onclick="heroSearchJump()">
+            <i class="fa-solid fa-arrow-right"></i>&nbsp; Search
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-value" data-count="1500">0</div>
+            <div class="hero-stat-label">Properties Listed</div>
+          </div>
+          <div>
+            <div class="hero-stat-value" data-count="950">0</div>
+            <div class="hero-stat-label">Happy Clients</div>
+          </div>
+          <div>
+            <div class="hero-stat-value" data-count="18">0</div>
+            <div class="hero-stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-prop-card">
+          <div class="hero-prop-icon">🏡</div>
+          <div>
+            <div class="hero-prop-label">Featured Listing</div>
+            <div class="hero-prop-value">Modern Hillside Villa</div>
+            <div class="hero-prop-sub">Beverly Hills, CA &nbsp;·&nbsp; $2,850,000</div>
+          </div>
+        </div>
+        <div class="hero-prop-card">
+          <div class="hero-prop-icon">🏙️</div>
+          <div>
+            <div class="hero-prop-label">Just Listed</div>
+            <div class="hero-prop-value">Downtown Penthouse</div>
+            <div class="hero-prop-sub">Manhattan, NY &nbsp;·&nbsp; $4,200,000</div>
+          </div>
+        </div>
+        <div class="hero-prop-card">
+          <div class="hero-prop-icon">🌊</div>
+          <div>
+            <div class="hero-prop-label">Price Reduced</div>
+            <div class="hero-prop-value">Beachfront Estate</div>
+            <div class="hero-prop-sub">Malibu, CA &nbsp;·&nbsp; $6,500,000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual reveal">
+          <div class="about-img-wrap">
+            <img src="assets/house7.jpeg" alt="">
+          </div>
+          <div class="about-float-card fc-1">
+            <div class="afc-icon"><i class="fa-solid fa-house"></i></div>
+            <div>
+              <div class="afc-val" data-count="2400">0</div>
+              <div class="afc-label">Homes Sold</div>
+            </div>
+          </div>
+          <div class="about-float-card fc-2">
+            <div class="afc-icon green"><i class="fa-solid fa-star"></i></div>
+            <div>
+              <div class="afc-val">4.9</div>
+              <div class="afc-label">Avg. Rating</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <span class="section-label reveal"><i class="fa-solid fa-circle-info"></i> About Us</span>
+          <h2 class="section-title reveal delay-1">
+            We Turn <span>House Hunting</span><br>Into Home Finding
+          </h2>
+          <p class="section-subtitle reveal delay-2">
+            Since 2006, LuxeRealty has helped thousands of buyers, sellers, and investors navigate the real estate market with confidence. Our team of 80+ certified agents is dedicated to providing personalized, data-driven guidance every step of the way.
+          </p>
+
+          <div class="features-grid" style="margin-top:2.5rem;">
+            <div class="feat-card reveal delay-1">
+              <div class="feat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h4>Trusted &amp; Verified</h4>
+              <p>Every listing is thoroughly verified by our in-house team before it goes live.</p>
+            </div>
+            <div class="feat-card reveal delay-2">
+              <div class="feat-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h4>Market Insights</h4>
+              <p>Access real-time data and trends to make smarter buying and selling decisions.</p>
+            </div>
+            <div class="feat-card reveal delay-3">
+              <div class="feat-icon"><i class="fa-solid fa-headset"></i></div>
+              <h4>Expert Support</h4>
+              <p>Our agents are available 7 days a week to answer your questions.</p>
+            </div>
+            <div class="feat-card reveal delay-4">
+              <div class="feat-icon"><i class="fa-solid fa-key"></i></div>
+              <h4>Smooth Closing</h4>
+              <p>We handle the paperwork so you can focus on what matters — moving in.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LISTINGS SECTION
+  ============================================================ -->
+  <section id="listings">
+    <div class="container">
+
+      <div class="listings-top">
+        <div>
+          <span class="section-label reveal"><i class="fa-solid fa-list"></i> Properties</span>
+          <h2 class="section-title reveal delay-1">Browse <span>Latest Listings</span></h2>
+        </div>
+        <p class="section-subtitle reveal delay-2" style="max-width:360px; text-align:right;">
+          Use the filters below to narrow your search and find the perfect match.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal">
+        <div class="filter-row">
+          <div class="filter-group search-group" style="flex:2; min-width:200px;">
+            <label class="filter-lbl">Search</label>
+            <div style="position:relative;">
+              <i class="fa-solid fa-magnifying-glass" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--gray-400);font-size:.88rem;pointer-events:none;"></i>
+              <input class="f-control" type="text" id="searchInput" placeholder="City, neighborhood, or type…" style="padding-left:2.65rem;" onkeydown="if(event.key==='Enter') filterAndRender()" />
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-lbl" for="sortPrice">Sort by Price</label>
+            <select class="f-control" id="sortPrice" onchange="filterAndRender()">
+              <option value="">Default</option>
+              <option value="price-high">Price: High → Low</option>
+              <option value="price-low">Price: Low → High</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-lbl" for="sortDate">Listing Date</label>
+            <select class="f-control" id="sortDate" onchange="filterAndRender()">
+              <option value="">Default</option>
+              <option value="date-new">Newest First</option>
+              <option value="date-old">Oldest First</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-lbl" for="filterType">Property Type</label>
+            <select class="f-control" id="filterType" onchange="filterAndRender()">
+              <option value="">All Types</option>
+              <option value="Villa">Villa</option>
+              <option value="Penthouse">Penthouse</option>
+              <option value="Estate">Estate</option>
+              <option value="Townhouse">Townhouse</option>
+              <option value="House">House</option>
+              <option value="Condo">Condo</option>
+              <option value="Loft">Loft</option>
+              <option value="Mansion">Mansion</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-lbl" for="filterBeds">Bedrooms</label>
+            <select class="f-control" id="filterBeds" onchange="filterAndRender()">
+              <option value="">Any</option>
+              <option value="1">1 Bed</option>
+              <option value="2">2 Beds</option>
+              <option value="3">3 Beds</option>
+              <option value="4">4 Beds</option>
+              <option value="5">5+ Beds</option>
+            </select>
+          </div>
+
+          <button class="filter-reset" onclick="resetFilters()">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+          </button>
+        </div>
+
+        <!-- Price Range Slider -->
+        <div class="price-range-row">
+          <div class="price-range-header">
+            <span class="price-range-lbl"><i class="fa-solid fa-sliders"></i> Price Range</span>
+            <div class="price-range-vals">
+              <span id="priceMinDisplay">$400K</span>
+              <span class="pr-sep">—</span>
+              <span id="priceMaxDisplay">$7M</span>
+            </div>
+          </div>
+          <div class="dual-range-wrap">
+            <div class="range-track-bg"></div>
+            <div class="range-track-fill" id="rangeTrackFill"></div>
+            <input type="range" id="priceMin" min="400000" max="7000000" value="400000"  step="50000" oninput="onPriceSlider()" />
+            <input type="range" id="priceMax" min="400000" max="7000000" value="7000000" step="50000" oninput="onPriceSlider()" />
+          </div>
+          <div class="price-ticks">
+            <span class="price-tick">$400K</span>
+            <span class="price-tick">$1.75M</span>
+            <span class="price-tick">$3.5M</span>
+            <span class="price-tick">$5.25M</span>
+            <span class="price-tick">$7M+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results bar -->
+      <div class="results-bar">
+        <p class="results-count">Showing <strong id="resultsNum">10</strong> properties</p>
+        <div class="view-toggle">
+          <button class="view-btn active" id="gridViewBtn" onclick="setView('grid')" title="Grid view"><i class="fa-solid fa-grip"></i></button>
+          <button class="view-btn" id="listViewBtn" onclick="setView('list')" title="List view"><i class="fa-solid fa-list"></i></button>
+        </div>
+      </div>
+
+      <div class="listings-grid" id="listingsGrid">
+        <!-- Populated by script.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REVIEWS SECTION
+  ============================================================ -->
+  <section id="reviews">
+    <div class="container">
+      <div class="reviews-head">
+        <span class="section-label reveal"><i class="fa-solid fa-star"></i> Testimonials</span>
+        <h2 class="section-title reveal delay-1">What Our <span>Clients Say</span></h2>
+        <p class="section-subtitle reveal delay-2">Real stories from real people who found their dream homes with LuxeRealty.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card reveal delay-1">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"LuxeRealty made buying our first home an absolute joy. Our agent Sarah was incredibly patient and found us the perfect place in just three weeks. We couldn't be happier!"</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">JM</div>
+            <div><div class="review-name">James &amp; Mia Carter</div><div class="review-role">First-time Homebuyers · Austin, TX</div></div>
+          </div>
+        </div>
+
+        <div class="review-card reveal delay-2">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"I've worked with many agencies over the years, but LuxeRealty is in a class of their own. They sold my Malibu property for $300k above asking price in under two weeks."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#0EA5E9,#10B981);">RK</div>
+            <div><div class="review-name">Rachel Kim</div><div class="review-role">Property Investor · Malibu, CA</div></div>
+          </div>
+        </div>
+
+        <div class="review-card reveal delay-3">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"Relocating for work is stressful, but the LuxeRealty team took every worry off my plate. Virtual tours, paperwork, negotiation — they handled everything flawlessly."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444);">DT</div>
+            <div><div class="review-name">Daniel Torres</div><div class="review-role">Relocation Buyer · Chicago, IL</div></div>
+          </div>
+        </div>
+
+        <div class="review-card reveal delay-1">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+          <p class="review-text">"The search filters saved me so much time. I was able to narrow down dozens of listings in minutes and book viewings the same day. Highly recommend!"</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#10B981,#0284C7);">LP</div>
+            <div><div class="review-name">Linda Park</div><div class="review-role">Condo Buyer · Miami, FL</div></div>
+          </div>
+        </div>
+
+        <div class="review-card reveal delay-2">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"Outstanding service from start to finish. The team's market knowledge is unmatched — they guided us through a competitive bidding situation and we won our dream home."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#1D4ED8,#6366F1);">AT</div>
+            <div><div class="review-name">Alex &amp; Tina Wu</div><div class="review-role">Luxury Buyers · Boston, MA</div></div>
+          </div>
+        </div>
+
+        <div class="review-card reveal delay-3">
+          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="review-text">"From the first consultation to handing over the keys, every interaction was professional and warm. LuxeRealty truly lives up to its name — pure luxury service."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#EC4899,#8B5CF6);">NB</div>
+            <div><div class="review-name">Nina Belmont</div><div class="review-role">Villa Buyer · Beverly Hills, CA</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MEET OUR REALTORS
+  ============================================================ -->
+  <section id="realtors">
+    <div class="container">
+      <div class="realtors-head">
+        <span class="section-label reveal"><i class="fa-solid fa-user-tie"></i> Our Team</span>
+        <h2 class="section-title reveal delay-1">Meet Our <span>Expert Realtors</span></h2>
+        <p class="section-subtitle reveal delay-2">Award-winning agents with decades of combined experience — dedicated to finding you the perfect property.</p>
+      </div>
+
+      <div class="realtors-flex">
+
+        <div class="realtor-card reveal delay-1">
+          <div class="realtor-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&q=80" alt="Sarah Mitchell" class="realtor-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="realtor-photo-fallback">SM</div>
+            <div class="realtor-verified" title="Verified Agent"><i class="fa-solid fa-check"></i></div>
+          </div>
+          <div class="realtor-name">Sarah Mitchell</div>
+          <div class="realtor-title">Luxury Property Specialist</div>
+          <p class="realtor-desc">With 14 years specializing in Beverly Hills and Malibu estates, Sarah has closed over $480M in transactions. Her market intuition and white-glove service set her apart.</p>
+          <div class="realtor-stats">
+            <div class="realtor-stat"><div class="realtor-stat-val">340+</div><div class="realtor-stat-lbl">Homes Sold</div></div>
+            <div class="realtor-stat"><div class="realtor-stat-val">14 yrs</div><div class="realtor-stat-lbl">Experience</div></div>
+            <div class="realtor-stat"><div class="realtor-stat-val">5.0 ⭐</div><div class="realtor-stat-lbl">Rating</div></div>
+          </div>
+          <div class="realtor-socials">
+            <a href="#" class="r-social" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="r-social" title="Phone"><i class="fa-solid fa-phone"></i></a>
+            <a href="#" class="r-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="r-social" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="realtor-card reveal delay-2">
+          <div class="realtor-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=256&q=80" alt="James Carter" class="realtor-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="realtor-photo-fallback">JC</div>
+            <div class="realtor-verified" title="Verified Agent"><i class="fa-solid fa-check"></i></div>
+          </div>
+          <div class="realtor-name">James Carter</div>
+          <div class="realtor-title">Commercial &amp; Investment Lead</div>
+          <p class="realtor-desc">James brings Wall Street rigor to real estate investment. Specializing in Manhattan penthouses and multi-unit properties, he maximizes ROI for buyers and sellers alike.</p>
+          <div class="realtor-stats">
+            <div class="realtor-stat"><div class="realtor-stat-val">520+</div><div class="realtor-stat-lbl">Homes Sold</div></div>
+            <div class="realtor-stat"><div class="realtor-stat-val">19 yrs</div><div class="realtor-stat-lbl">Experience</div></div>
+            <div class="realtor-stat"><div class="realtor-stat-val">4.9 ⭐</div><div class="realtor-stat-lbl">Rating</div></div>
+          </div>
+          <div class="realtor-socials">
+            <a href="#" class="r-social" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="r-social" title="Phone"><i class="fa-solid fa-phone"></i></a>
+            <a href="#" class="r-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="r-social" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="realtor-card reveal delay-3">
+          <div class="realtor-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=256&q=80" alt="Maria Santos" class="realtor-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="realtor-photo-fallback">MS</div>
+            <div class="realtor-verified" title="Verified Agent"><i class="fa-solid fa-check"></i></div>
+          </div>
+          <div class="realtor-name">Maria Santos</div>
+          <div class="realtor-title">Residential &amp; Relocation Expert</div>
+          <p class="realtor-desc">Fluent in English, Spanish, and Portuguese, Maria specializes in helping families relocate with ease. Her warmth and local expertise have earned her a 100% client referral rate.</p>
+          <div class="realtor-stats">
+            <div class="realtor-stat"><div class="realtor-stat-val">280+</div><div class="realtor-stat-lbl">Homes Sold</div></div>
+            <div class="realtor-stat"><div class="realtor-stat-val">10 yrs</div><div class="realtor-stat-lbl">Experience</div></div>
+            <div class="realtor-stat"><div class="realtor-stat-val">5.0 ⭐</div><div class="realtor-stat-lbl">Rating</div></div>
+          </div>
+          <div class="realtor-socials">
+            <a href="#" class="r-social" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="r-social" title="Phone"><i class="fa-solid fa-phone"></i></a>
+            <a href="#" class="r-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="r-social" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT / FOOTER
+  ============================================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+          <span class="section-label"><i class="fa-solid fa-envelope"></i> Contact Us</span>
+          <h2 class="section-title" style="color:white; margin-top:0.5rem;">
+            Let's Find Your<br><span style="color:#7DD3FC; -webkit-text-fill-color:#7DD3FC;">Perfect Home</span>
+          </h2>
+          <p class="section-subtitle">Ready to start your real estate journey? Our expert agents are standing by to help you buy, sell, or invest.</p>
+          <div class="contact-items">
+            <div class="c-item">
+              <div class="c-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div><div class="c-item-main">750 Wilshire Blvd, Suite 1200</div><div class="c-item-sub">Los Angeles, CA 90017</div></div>
+            </div>
+            <div class="c-item">
+              <div class="c-item-icon"><i class="fa-solid fa-phone"></i></div>
+              <div><div class="c-item-main">+1 (310) 555-0192</div><div class="c-item-sub">Mon – Sat, 8am – 8pm PT</div></div>
+            </div>
+            <div class="c-item">
+              <div class="c-item-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div><div class="c-item-main">hello@luxerealty.com</div><div class="c-item-sub">We reply within 24 hours</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal delay-2">
+          <div class="contact-form-card">
+            <h3>Send Us a Message</h3>
+            <div id="contactFormWrap">
+              <form onsubmit="submitContactForm(event)">
+                <div class="form-row">
+                  <div class="form-group"><label for="cf-name">First Name</label><input type="text" id="cf-name" placeholder="John" required /></div>
+                  <div class="form-group"><label for="cf-last">Last Name</label><input type="text" id="cf-last" placeholder="Doe" required /></div>
+                </div>
+                <div class="form-group"><label for="cf-email">Email Address</label><input type="email" id="cf-email" placeholder="john@example.com" required /></div>
+                <div class="form-group"><label for="cf-phone">Phone Number</label><input type="tel" id="cf-phone" placeholder="+1 (555) 000-0000" /></div>
+                <div class="form-group">
+                  <label for="cf-interest">I'm Interested In</label>
+                  <select id="cf-interest">
+                    <option>Buying a Property</option>
+                    <option>Selling a Property</option>
+                    <option>Property Investment</option>
+                    <option>Rental Listings</option>
+                    <option>General Inquiry</option>
+                  </select>
+                </div>
+                <div class="form-group"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us what you're looking for…"></textarea></div>
+                <button type="submit" class="form-submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+              </form>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+              <h4>Message Sent!</h4>
+              <p>Thanks for reaching out. One of our agents will be in touch with you within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bar container">
+      <p>&copy; 2024 <span>LuxeRealty</span>. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </section>
+
+  <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -17,11 +17,42 @@ const TYPE_MAP = {
 const EMOJIS    = ['🏡','🏙️','🌊','🏘️','⛰️','🏢','🏠','🌅','🏛️','⛳'];
 const GRADIENTS = ['g1','g2','g3','g4','g5','g6','g7','g8','g9','g10'];
 
+// RentCast's listings endpoint rarely (if ever) includes a `photos` field.
+// Fall back to a curated pool of real, verified real-estate photos so every
+// card still shows an actual photo instead of the gradient/emoji tile.
+const PHOTO_POOL = [
+  'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1592595896551-12b371d546d5?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?auto=format&fit=crop&w=800&q=80',
+];
+
+function fallbackPhoto(id) {
+  var str = String(id);
+  var hash = 0;
+  for (var i = 0; i < str.length; i++) {
+    hash = (hash * 31 + str.charCodeAt(i)) >>> 0;
+  }
+  return PHOTO_POOL[hash % PHOTO_POOL.length];
+}
+
 function mapRentcastListing(p, i) {
   const city  = p.city  || '';
   const state = p.state || '';
+  const id    = p.id || i;
   return {
-    id: p.id || i,
+    id: id,
     title: p.addressLine1 || p.formattedAddress || 'Property',
     price: p.price || 0,
     bedrooms: p.bedrooms || 0,
@@ -30,7 +61,7 @@ function mapRentcastListing(p, i) {
     type: TYPE_MAP[p.propertyType] || p.propertyType || 'House',
     location: city && state ? `${city}, ${state}` : p.formattedAddress || '',
     listingDate: p.listedDate ? p.listedDate.split('T')[0] : new Date().toISOString().split('T')[0],
-    image: (p.photos && p.photos[0]) || '',
+    image: (p.photos && p.photos[0]) || fallbackPhoto(id),
     emoji: EMOJIS[i % EMOJIS.length],
     gradient: GRADIENTS[i % GRADIENTS.length],
     status: 'For Sale',

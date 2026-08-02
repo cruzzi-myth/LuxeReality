@@ -432,7 +432,11 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     }
     .hero-prop-icon {
-      font-size: 2rem;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background-size: cover;
+      background-position: center;
       flex-shrink: 0;
     }
     .hero-prop-label {
